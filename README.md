@@ -4,126 +4,131 @@
 
 ## Overview
 
-This project demonstrates a **lab environment simulating a real-world Active Directory (AD) infrastructure** integrated with **Splunk** for centralized logging and monitoring.  
-It showcases user and group management, domain policies, and security monitoring through a SIEM platform.
+This project demonstrates the design and implementation of an **isolated Active Directory (AD) laboratory environment** integrated with **Splunk** for centralized logging and monitoring.  
+The lab simulates real-world enterprise IT infrastructure, supporting:
 
-**Key Features:**
-- Active Directory domain setup with users, groups, and Organizational Units (OUs)  
-- Group Policy Objects (GPOs) for security enforcement  
-- Event collection from AD logs into Splunk  
-- Realistic simulation of user activity and login events  
-- Visualization of security events via Splunk dashboards  
+- User and group management  
+- Domain policies and Group Policy Objects (GPOs)  
+- Authentication monitoring  
+- Security event collection and visualization  
 
----
-
-## Table of Contents
-1. [Lab Architecture](#lab-architecture)  
-2. [Setup Instructions](#setup-instructions)  
-3. [Simulated Scenarios](#simulated-scenarios)  
-4. [Splunk Integration](#splunk-integration)  
-5. [Screenshots](#screenshots)  
-6. [Technologies Used](#technologies-used)  
-7. [Future Enhancements](#future-enhancements)  
+The goal is to showcase practical skills in **Active Directory administration, SIEM monitoring, and security operations**, similar to workflows used by SOC, Incident Response, and IT Security teams.
 
 ---
 
 ## Lab Architecture
 
+The lab consists of three fully isolated virtual machines configured on a host-only network:
+
+| VM | Role |
+|----|------|
+| **Windows Server** | Domain Controller hosting Active Directory Domain Services (AD DS), managing users, groups, and GPOs |
+| **Windows Client VM** | Domain-joined endpoint for simulating user activity |
+| **Splunk Server** | Collects and visualizes Windows Event Logs from AD and client VMs |
+
 ![Architecture Diagram](screenshots/architecture.png)
 
-- **VM1 – Windows Server (AD Domain Controller)**:  
-  - Active Directory Domain Services installed  
-  - User and group creation, OU management, GPO policies  
-- **VM2 – Client VM (Windows 10/11)**:  
-  - Joined to the AD domain  
-  - Used to generate login and activity events  
-- **VM3 – Splunk Server (Linux/Windows)**:  
-  - Collects Windows Event Logs from AD  
-  - Dashboards visualize authentication, user activity, and security alerts  
+All operations are performed in a **controlled, isolated environment** for safe experimentation.
 
 ---
 
-## Setup Instructions
+## Tools & Technologies
 
-### 1. Active Directory Environment
-1. Install **Windows Server 2019/2022** on a VM.  
-2. Add the **Active Directory Domain Services** role.  
-3. Promote the server to a **Domain Controller**.  
-4. Create users, groups, and Organizational Units.  
-5. Configure Group Policies (password complexity, account lockout, etc.).
+**Active Directory & Windows**
+- Windows Server 2019/2022 Evaluation  
+- Windows 10/11 Client  
+- Active Directory Domain Services (AD DS)  
+- Group Policy Objects (GPOs)  
 
-### 2. Splunk Integration
-1. Install **Splunk Free** on a separate VM (Linux or Windows).  
-2. Install the **Universal Forwarder** on AD VMs.  
-3. Configure forwarding of Windows Event Logs (Security, System, Application).  
-4. Create dashboards to monitor:
-   - Failed logins  
-   - Successful logins  
-   - Privilege changes  
-   - Group membership changes  
+**SIEM / Monitoring**
+- [Splunk Free](https://www.splunk.com/)  
+- Splunk Universal Forwarder  
 
-### 3. Simulated Security Events
-- Failed login attempts (to trigger alerts)  
-- User account creation/deletion  
-- Privilege escalation  
-- Group membership changes  
+**Virtualization**
+- VirtualBox / VMware Workstation  
 
 ---
 
-## Simulated Scenarios
+## Lab Methodology
 
-| Scenario | Event Source | Detection in Splunk |
-|----------|--------------|-------------------|
-| Failed login | Security Event Log | Dashboard alert |
-| Privilege escalation | Security Event Log | Automated search/report |
-| User creation/deletion | AD logs | Dashboard visualization |
-| Group policy changes | System logs | Splunk alert triggered |
+### 1. Environment Preparation
+- Configured **host-only networking** to isolate lab environment  
+- Created **VM snapshots** for rollback  
+- Installed required Windows Server and Client VMs  
+- Disabled unnecessary services to reduce log noise  
+
+### 2. Active Directory Setup
+- Installed **AD DS** on Windows Server VM  
+- Promoted server to **Domain Controller**  
+- Created **Organizational Units (OUs), users, and groups**  
+- Configured **Group Policy Objects (GPOs)** for security (password complexity, account lockout, auditing)  
+
+### 3. Simulated User Activity
+- Generated successful and failed login attempts  
+- Created, deleted, and modified user accounts  
+- Executed privilege escalation and administrative tasks  
+- Modified group memberships  
+
+### 4. Splunk Integration
+- Installed **Splunk Free** on a dedicated VM  
+- Deployed **Splunk Universal Forwarder** on AD and client VMs  
+- Collected **Windows Event Logs**: Security, System, Application  
+- Created dashboards for:
+  - Authentication monitoring  
+  - Failed login detection  
+  - Privilege escalation tracking  
+  - Group membership and policy changes  
+
+### 5. Security Monitoring and Analysis
+- Monitored Splunk dashboards for anomalies and alerts  
+- Validated log collection and event correlation  
+- Simulated potential attack scenarios to test detection  
 
 ---
 
-## Splunk Integration
+## Skills Demonstrated
+- Active Directory deployment and administration  
+- User and group management in enterprise environments  
+- Group Policy Object configuration for security  
+- Windows Event Log collection and SIEM monitoring  
+- Splunk dashboard creation and alerting  
+- Security monitoring and threat detection  
+- Lab design and network isolation  
+- Technical documentation and reporting  
 
-![Splunk Dashboard](screenshots/splunk_dashboard.png)
+---
 
-- Monitors real-time authentication events  
-- Detects anomalies such as repeated failed logins or privilege changes  
-- Provides visual analytics to track AD activity and potential security issues  
+## Project Outcomes
+- Built a fully functional **isolated Active Directory lab**  
+- Integrated AD with **Splunk** for centralized log collection and monitoring  
+- Simulated real-world scenarios: login failures, privilege escalation, group changes  
+- Produced dashboards and alerts suitable for SOC-style analysis  
+- Created a **repeatable lab setup** for portfolio demonstration  
 
 ---
 
 ## Screenshots
 
-1. Active Directory Users & Groups
-
+**AD Users & Groups**  
 ![AD Users](screenshots/ad_users.png)
 
-2. Group Policy Objects
-
+**Group Policy Objects**  
 ![AD GPO](screenshots/ad_gpo.png)
 
-3. Splunk Event Collection Dashboard
+**Splunk Event Collection Dashboard**  
+![Splunk Dashboard](screenshots/splunk_dashboard.png)
 
-![Splunk Events](screenshots/splunk_events.png)
-
-4. Security Alerts Example
-
+**Security Alerts Example**  
 ![Splunk Alert](screenshots/splunk_alert.png)
 
 ---
 
-## Technologies Used
-- **Windows Server 2019/2022** – Active Directory domain controller  
-- **Windows 10/11 Client VM** – Domain-joined endpoint  
-- **Splunk Free** – SIEM platform for log collection and analysis  
-- **Universal Forwarder** – Collects Windows Event Logs  
-- **VirtualBox / VMware** – Virtualization platform for lab setup  
-
----
-
 ## Future Enhancements
-- Add **more realistic attack simulations** (password spraying, brute force, phishing)  
-- Integrate **SOAR workflows** to automate responses to detected incidents  
-- Expand dashboards to include **audit trails, login patterns, and compliance reports**  
-- Implement **multi-domain or hybrid AD environments** for enterprise-scale simulation  
+- Expand lab to include **multi-domain or hybrid AD environments**  
+- Simulate advanced attack scenarios (password spraying, brute force, phishing)  
+- Integrate **SOAR tools** for automated response  
+- Enhance dashboards with detailed **audit trails** and compliance reporting  
 
 
+
+*Note: Replace `screenshots/*.png` with your actual images from the lab.*
