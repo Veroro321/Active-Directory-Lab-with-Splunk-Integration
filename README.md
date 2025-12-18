@@ -1,6 +1,9 @@
 # Active Directory Lab with Splunk Integration
 
-![Project Banner](screenshots/banner.png)
+<img width="440" height="440" alt="Splunk-Emblem" src="https://github.com/user-attachments/assets/b6226698-f577-42ea-9112-fd07c2c661d5" />
+
+<img width="260" height="260" alt="R" src="https://github.com/user-attachments/assets/1538f034-af66-49ec-9623-fa575d2e4393" />
+
 
 ## Overview
 
