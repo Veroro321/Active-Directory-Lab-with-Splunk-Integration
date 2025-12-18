@@ -23,6 +23,11 @@ The goal is to showcase practical skills in **Active Directory administration, S
 
 The lab consists of three fully isolated virtual machines configured on a host-only network:
 
+<img width="461" height="573" alt="image" src="https://github.com/user-attachments/assets/d239554f-174f-4a84-b113-41f5e120cf0e" />
+
+
+
+
 | VM | Role |
 |----|------|
 | **Windows Server** | Domain Controller hosting Active Directory Domain Services (AD DS), managing users, groups, and GPOs |
