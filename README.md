@@ -121,18 +121,16 @@ The lab consists of four fully virtual machines:
 <img width="250" height="357" alt="image" src="https://github.com/user-attachments/assets/e23647c5-72ee-4c97-b28c-5150fe95d2db" />
 
 **Splunk Event Collection Dashboard**  
+**Security Alerts Example**  
 
 <img width="1232" height="327" alt="image" src="https://github.com/user-attachments/assets/22561904-3084-4da6-bbb9-553a136608cc" />
 
-
-**Security Alerts Example**  
 
 
 ---
 
 ## Future Enhancements
 - Expand lab to include **multi-domain or hybrid AD environments**  
-- Simulate advanced attack scenarios (password spraying, brute force, phishing)  
 - Integrate **SOAR tools** for automated response  
 - Enhance dashboards with detailed **audit trails** and compliance reporting  
 
