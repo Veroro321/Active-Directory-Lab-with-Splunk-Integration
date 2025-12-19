@@ -21,8 +21,7 @@ The goal is to showcase practical skills in **Active Directory administration, S
 
 ## Lab Architecture
 
-The lab consists of three fully isolated virtual machines configured on a host-only network:
-
+The lab consists of four fully virtual machines:
 <img width="461" height="573" alt="image" src="https://github.com/user-attachments/assets/d239554f-174f-4a84-b113-41f5e120cf0e" />
 
 
@@ -34,9 +33,6 @@ The lab consists of three fully isolated virtual machines configured on a host-o
 | **Windows Client VM** | Domain-joined endpoint for simulating user activity |
 | **Splunk Server** | Collects and visualizes Windows Event Logs from AD and client VMs |
 
-![Architecture Diagram](screenshots/architecture.png)
-
-All operations are performed in a **controlled, isolated environment** for safe experimentation.
 
 ---
 
@@ -53,7 +49,7 @@ All operations are performed in a **controlled, isolated environment** for safe 
 - Splunk Universal Forwarder  
 
 **Virtualization**
-- VirtualBox / VMware Workstation  
+- VirtualBox 
 
 ---
 
@@ -118,16 +114,18 @@ All operations are performed in a **controlled, isolated environment** for safe 
 ## Screenshots
 
 **AD Users & Groups**  
-![AD Users](screenshots/ad_users.png)
+
 
 **Group Policy Objects**  
-![AD GPO](screenshots/ad_gpo.png)
+<img width="250" height="357" alt="image" src="https://github.com/user-attachments/assets/e23647c5-72ee-4c97-b28c-5150fe95d2db" />
 
 **Splunk Event Collection Dashboard**  
-![Splunk Dashboard](screenshots/splunk_dashboard.png)
+
+<img width="1232" height="327" alt="image" src="https://github.com/user-attachments/assets/22561904-3084-4da6-bbb9-553a136608cc" />
+
 
 **Security Alerts Example**  
-![Splunk Alert](screenshots/splunk_alert.png)
+
 
 ---
 
@@ -137,6 +135,3 @@ All operations are performed in a **controlled, isolated environment** for safe 
 - Integrate **SOAR tools** for automated response  
 - Enhance dashboards with detailed **audit trails** and compliance reporting  
 
-
-
-*Note: Replace `screenshots/*.png` with your actual images from the lab.*
