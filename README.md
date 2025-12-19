@@ -32,6 +32,7 @@ The lab consists of four fully virtual machines:
 | **Windows Server** | Domain Controller hosting Active Directory Domain Services (AD DS), managing users, groups, and GPOs |
 | **Windows Client VM** | Domain-joined endpoint for simulating user activity |
 | **Splunk Server** | Collects and visualizes Windows Event Logs from AD and client VMs |
+| **Kali Linux ** | This is the machine that we will conduct our brute force attacks to generate some data to go into SPLUNK |
 
 
 ---
