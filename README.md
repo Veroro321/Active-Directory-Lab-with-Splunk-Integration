@@ -124,10 +124,12 @@ Example of the System, application, etc... being tracked on Splunnk
 ## Screenshots
 
 **AD Users & Groups**  
+<img width="1024" height="768" alt="VirtualBox_ADDC01_20_12_2025_13_43_42" src="https://github.com/user-attachments/assets/3f9a11b6-9d8e-45c8-a652-4f9a0763e579" />
+<img width="1024" height="768" alt="VirtualBox_ADDC01_20_12_2025_13_46_53" src="https://github.com/user-attachments/assets/bb6d417f-bc34-4593-a168-e0880839ee38" />
 
 
 **Group Policy Objects**  
-<img width="250" height="357" alt="image" src="https://github.com/user-attachments/assets/e23647c5-72ee-4c97-b28c-5150fe95d2db" />
+
 
 **Splunk Event Collection Dashboard**  
 **Security Alerts Example**  
