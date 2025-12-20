@@ -47,7 +47,9 @@ The lab consists of four fully virtual machines:
 
 **SIEM / Monitoring**
 - [Splunk Free](https://www.splunk.com/)  
-- Splunk Universal Forwarder  
+- Splunk Universal Forwarder
+
+<img width="1024" height="768" alt="lab2Screenshot 2024-12-20 133142" src="https://github.com/user-attachments/assets/1dbe47b6-c4ca-4d7c-99e0-668852b434b1" />
 
 **Virtualization**
 - VirtualBox 
