@@ -22,9 +22,13 @@ The goal is to showcase practical skills in **Active Directory administration, S
 ## Lab Architecture
 
 The lab consists of four fully virtual machines:
-<img width="461" height="573" alt="image" src="https://github.com/user-attachments/assets/d239554f-174f-4a84-b113-41f5e120cf0e" />
 
 
+
+<img width="503" height="558" alt="image" src="https://github.com/user-attachments/assets/93c0cfad-ba2b-4036-9be3-aac63669176a" />
+
+
+[Uploading Untitled Diagram (2).drawio…]()
 
 
 | VM | Role |
@@ -33,6 +37,7 @@ The lab consists of four fully virtual machines:
 | **Windows Client VM** | Domain-joined endpoint for simulating user activity |
 | **Splunk Server** | Collects and visualizes Windows Event Logs from AD and client VMs |
 | **Kali Linux ** | This is the machine that we will conduct our brute force attacks to generate some data to go into SPLUNK |
+
 
 
 ---
