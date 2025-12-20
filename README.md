@@ -46,9 +46,16 @@ The lab consists of four fully virtual machines:
 - Group Policy Objects (GPOs)  
 
 **SIEM / Monitoring**
-- [Splunk Free](https://www.splunk.com/)  
+- Splunk Free
 - Splunk Universal Forwarder
 
+**Offensive Security / Attack Simulation**
+- Kali Linux
+- Crowbar (used to brute-force SSH authentication)
+
+<img width="1215" height="334" alt="image" src="https://github.com/user-attachments/assets/8abfa251-3670-43fd-b25d-f75ead27d6ee" />
+
+Example of the System, application, etc... being tracked on Splunnk
 <img width="1024" height="768" alt="lab2Screenshot 2024-12-20 133142" src="https://github.com/user-attachments/assets/1dbe47b6-c4ca-4d7c-99e0-668852b434b1" />
 
 **Virtualization**
