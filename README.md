@@ -137,12 +137,15 @@ Example of the System, application, etc... being tracked on Splunnk
 <img width="1024" height="768" alt="VirtualBox_ADDC01_20_12_2025_13_46_53" src="https://github.com/user-attachments/assets/bb6d417f-bc34-4593-a168-e0880839ee38" />
 
 
-**Group Policy Objects**  
-
-
 **Splunk Event Collection Dashboard**  
 **Security Alerts Example**  
+<img width="386" height="130" alt="image" src="https://github.com/user-attachments/assets/d450c2b0-7a92-4c9a-83f7-096d62e6c061" />
 
+Splunk search query used: 
+index = endpoint jsmith evencode = 4625
+
+
+<img width="313" height="148" alt="image" src="https://github.com/user-attachments/assets/483c3901-e390-49d0-967c-d66dac355197" />
 
 
 ---
