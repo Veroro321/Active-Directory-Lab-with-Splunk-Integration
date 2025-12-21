@@ -58,7 +58,8 @@ The lab consists of four fully virtual machines:
 - Kali Linux
 - Crowbar (used to brute-force SSH authentication)
 
-<img width="1215" height="334" alt="image" src="https://github.com/user-attachments/assets/8abfa251-3670-43fd-b25d-f75ead27d6ee" />
+<img width="800" height="600" alt="VirtualBox_kali-linux-2025 4-virtualbox-amd64_20_12_2025_17_03_22" src="https://github.com/user-attachments/assets/f56d91ce-9b48-4a8b-930d-1452cec27fda" />
+
 
 Example of the System, application, etc... being tracked on Splunnk
 <img width="1024" height="768" alt="lab2Screenshot 2024-12-20 133142" src="https://github.com/user-attachments/assets/1dbe47b6-c4ca-4d7c-99e0-668852b434b1" />
@@ -138,8 +139,6 @@ Example of the System, application, etc... being tracked on Splunnk
 
 **Splunk Event Collection Dashboard**  
 **Security Alerts Example**  
-
-<img width="1232" height="327" alt="image" src="https://github.com/user-attachments/assets/22561904-3084-4da6-bbb9-553a136608cc" />
 
 
 
