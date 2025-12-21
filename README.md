@@ -36,7 +36,7 @@ The lab consists of four fully virtual machines:
 | **Windows Server** | Domain Controller hosting Active Directory Domain Services (AD DS), managing users, groups, and GPOs |
 | **Windows Client VM** | Domain-joined endpoint for simulating user activity |
 | **Splunk Server** | Collects and visualizes Windows Event Logs from AD and client VMs |
-| **Kali Linux ** | This is the machine that we will conduct our brute force attacks to generate some data to go into SPLUNK |
+| **Kali Linux ** | This is the machine that we will conduct our brute force attacks on to generate some telemetry datta to go into Splunk |
 
 
 
@@ -45,8 +45,8 @@ The lab consists of four fully virtual machines:
 ## Tools & Technologies
 
 **Active Directory & Windows**
-- Windows Server 2019/2022 Evaluation  
-- Windows 10/11 Client  
+- Windows Server 2022 Evaluation  
+- Windows 10 Client  
 - Active Directory Domain Services (AD DS)  
 - Group Policy Objects (GPOs)  
 
@@ -58,13 +58,15 @@ The lab consists of four fully virtual machines:
 - Kali Linux
 - Crowbar (used to brute-force SSH authentication)
 
-<img width="800" height="600" alt="VirtualBox_kali-linux-2025 4-virtualbox-amd64_20_12_2025_17_03_22" src="https://github.com/user-attachments/assets/f56d91ce-9b48-4a8b-930d-1452cec27fda" />
+
 <img width="800" height="600" alt="VirtualBox_kali-linux-2025 4-virtualbox-amd64_20_12_2025_17_09_18" src="https://github.com/user-attachments/assets/79fc8918-e1ba-4f38-a995-0e21f8a0d9e6" />
 
+---<img width="800" height="600" alt="VirtualBox_kali-linux-2025 4-virtualbox-amd64_20_12_2025_17_45_00" src="https://github.com/user-attachments/assets/3594a646-80df-4b24-b598-264a9439b1df" />
 
 
+Configuration of the Splunk server and what type of data we will be collecting
+<img width="1272" height="703" alt="image" src="https://github.com/user-attachments/assets/1b4d5c39-6369-48e4-bc9b-68539f4269d7" />
 
-Example of the System, application, etc... being tracked on Splunnk
 <img width="1024" height="768" alt="lab2Screenshot 2024-12-20 133142" src="https://github.com/user-attachments/assets/1dbe47b6-c4ca-4d7c-99e0-668852b434b1" />
 
 **Virtualization**
@@ -75,27 +77,23 @@ Example of the System, application, etc... being tracked on Splunnk
 ## Lab Methodology
 
 ### 1. Environment Preparation
-- Configured **host-only networking** to isolate lab environment  
 - Created **VM snapshots** for rollback  
-- Installed required Windows Server and Client VMs  
-- Disabled unnecessary services to reduce log noise  
-
+- Installed required Windows Server and Client VMs
+  
 ### 2. Active Directory Setup
 - Installed **AD DS** on Windows Server VM  
-- Promoted server to **Domain Controller**  
+- Promoted server to **Domain Controller** in this case I named it myproject.local
 - Created **Organizational Units (OUs), users, and groups**  
-- Configured **Group Policy Objects (GPOs)** for security (password complexity, account lockout, auditing)  
 
 ### 3. Simulated User Activity
 - Generated successful and failed login attempts  
 - Created, deleted, and modified user accounts  
 - Executed privilege escalation and administrative tasks  
-- Modified group memberships  
 
 ### 4. Splunk Integration
 - Installed **Splunk Free** on a dedicated VM  
 - Deployed **Splunk Universal Forwarder** on AD and client VMs  
-- Collected **Windows Event Logs**: Security, System, Application  
+- Collected Sysmon event logs: Security, System, Application  
 - Created dashboards for:
   - Authentication monitoring  
   - Failed login detection  
@@ -105,14 +103,13 @@ Example of the System, application, etc... being tracked on Splunnk
 ### 5. Security Monitoring and Analysis
 - Monitored Splunk dashboards for anomalies and alerts  
 - Validated log collection and event correlation  
-- Simulated potential attack scenarios to test detection  
+- Simulated potential attack scenarios (brute-force attacks via crowbar to test detection  
 
 ---
 
 ## Skills Demonstrated
 - Active Directory deployment and administration  
 - User and group management in enterprise environments  
-- Group Policy Object configuration for security  
 - Windows Event Log collection and SIEM monitoring  
 - Splunk dashboard creation and alerting  
 - Security monitoring and threat detection  
@@ -133,9 +130,8 @@ Example of the System, application, etc... being tracked on Splunnk
 ## Screenshots
 
 **AD Users & Groups**  
+<img width="1024" height="768" alt="VirtualBox_ADDC01_20_12_2025_17_40_14" src="https://github.com/user-attachments/assets/c4bf47ad-243b-4691-b85b-128edf6409a4" />
 <img width="1024" height="768" alt="VirtualBox_ADDC01_20_12_2025_13_43_42" src="https://github.com/user-attachments/assets/3f9a11b6-9d8e-45c8-a652-4f9a0763e579" />
-<img width="1024" height="768" alt="VirtualBox_ADDC01_20_12_2025_13_46_53" src="https://github.com/user-attachments/assets/bb6d417f-bc34-4593-a168-e0880839ee38" />
-
 
 **Splunk Event Collection Dashboard**  
 **Security Alerts Example**  
@@ -147,8 +143,6 @@ index = endpoint jsmith evencode = 4625
 
 <img width="313" height="148" alt="image" src="https://github.com/user-attachments/assets/483c3901-e390-49d0-967c-d66dac355197" />
 
-
----
 
 ## Future Enhancements
 - Expand lab to include **multi-domain or hybrid AD environments**  
