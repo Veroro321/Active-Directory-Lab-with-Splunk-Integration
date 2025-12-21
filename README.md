@@ -59,6 +59,9 @@ The lab consists of four fully virtual machines:
 - Crowbar (used to brute-force SSH authentication)
 
 <img width="800" height="600" alt="VirtualBox_kali-linux-2025 4-virtualbox-amd64_20_12_2025_17_03_22" src="https://github.com/user-attachments/assets/f56d91ce-9b48-4a8b-930d-1452cec27fda" />
+<img width="800" height="600" alt="VirtualBox_kali-linux-2025 4-virtualbox-amd64_20_12_2025_17_09_18" src="https://github.com/user-attachments/assets/79fc8918-e1ba-4f38-a995-0e21f8a0d9e6" />
+
+
 
 
 Example of the System, application, etc... being tracked on Splunnk
